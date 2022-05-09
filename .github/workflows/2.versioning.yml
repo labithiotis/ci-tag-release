@@ -18,6 +18,6 @@ jobs:
         uses: labithiotis/gh-action-bump-version@master
         env:
           GITHUB_ACTOR: labithiotis
-          GITHUB_TOKEN: ${{ secrets.CI_PAT }}
+          GITHUB_TOKEN1: ${{ secrets.CI_PAT }}
         with:
           tag-prefix: 'v'
