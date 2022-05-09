@@ -13,7 +13,7 @@ jobs:
     name: Increment Versions
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+#      - uses: actions/checkout@v2
       - name: Increment API version
         uses: phips28/gh-action-bump-version@master
         env:
