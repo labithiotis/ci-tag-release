@@ -1,6 +1,6 @@
 {
   "name": "ci-tag-release",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "repository": "git@github.com:labithiotis/ci-tag-release.git",
   "author": "labithiotis <labithiotis@gmail.com>",
   "license": "MIT",
