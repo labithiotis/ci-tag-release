@@ -1,0 +1,23 @@
+name: Versioning
+
+on:
+  workflow_run:
+    workflows: [CI]
+    branches: [main]
+    types:
+      - completed
+
+jobs:
+  versioning:
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    name: Increment Versions
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Increment API version
+        uses: phips28/gh-action-bump-version@master
+        env:
+          GITHUB_ACTOR: labithiotis
+          GITHUB_TOKEN: ${{ secrets.CI_PAT }}
+        with:
+          tag-prefix: v
